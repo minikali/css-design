@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    hsl(273, 75%, 66%) 0%,
+    hsl(240, 73%, 65%) 100%
+  );
+}
+
+#faq {
+  margin: 130px 20px 130px 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.54);
+  max-width: 400px;
+}
+
+#faq .artwork {
+  flex-direction: column;
+  align-items: center;
+  margin: -109px 0 0 0;
+}
+
+#faq .artwork.desktop {
+  display: none;
+}
+
+#faq .artwork.mobile {
+  display: flex;
+}
+
+#faq .artwork .wrapper {
+  display: inline-block;
+}
+
+#faq .artwork .wrapper img {
+  margin: 0 0px 0px -29px;
+}
+
+#faq .artwork .wrapper + img {
+  margin: -104px 0 0px 0;
+}
+
+#faq h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+#faq ul {
+  list-style-type: none;
+  padding: 0 15px;
+}
+
+#faq ul li {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+#faq ul li p {
+  margin: 10px 0;
+  display: block;
+}
+
+#faq ul li hr {
+  margin: 0;
+}
+
+#faq ul li .faq-question {
+  color: hsl(237, 12%, 33%);
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#faq ul li .faq-question img {
+  transform: rotate(0deg);
+}
+
+#faq ul li .faq-question.bold img {
+  transform: rotate(180deg);
+}
+
+#faq ul li .faq-answer {
+  color: hsl(240, 6%, 50%);
+  /* line-height: 1.3; */
+  overflow: hidden;
+  height: auto;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+#faq ul li .faq-answer.show {
+  max-height: 100px;
+}
+
+.bold {
+  font-weight: bold;
+  color: hsl(238, 29%, 16%);
+}
+
+@media (min-width: 767px) {
+  #faq {
+    flex-direction: row;
+    padding: 0;
+    max-width: 1000px;
+    margin: 130px 80px 130px 80px;
+  }
+
+  #faq .content {
+    padding: 60px;
+  }
+
+  #faq .artwork.desktop {
+    margin: 0 0 0 0;
+    display: flex;
+  }
+
+  #faq .artwork.mobile {
+    display: none;
+  }
+
+  #faq .artwork.desktop {
+    display: block;
+    position: relative;
+  }
+
+  #faq .artwork.desktop .wrapper {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #faq .artwork.desktop .wrapper .art-img {
+    margin: 14% 0px 0px -82px;
+  }
+
+  #faq .artwork.desktop .cube,
+  #faq .artwork.desktop .wrapper .shadow {
+    position: absolute;
+  }
+  #faq .artwork.desktop .cube {
+    left: -99px;
+    margin: 48% 0 0 0;
+    z-index: 2;
+  }
+
+  #faq .artwork.desktop .wrapper .shadow {
+    left: -570px;
+    margin: -87% 0 0 0;
+  }
+
+  #faq ul li {
+    font-size: 18px;
+  }
+}
