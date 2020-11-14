@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  font-size: 13px;
-  font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
 
-.container {
+.article-preview-container {
+  font-size: 13px;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
   background: hsl(210, 46%, 95%);
   min-height: 100vh;
   display: flex;
